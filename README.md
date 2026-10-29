@@ -37,6 +37,8 @@ Robinhood shows your average purchase price. It doesn't subtract the premium you
 - **Auto-update** for the installed app
 - Dark mode by default. Your data stays on your PC; the only network calls are Yahoo Finance quotes.
 
+**New here? Read the [user guide](USER_GUIDE.md)** for how to use every feature.
+
 ## Windows desktop app
 
 ### Installing (for you and friends)
