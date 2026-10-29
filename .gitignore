@@ -1,0 +1,13 @@
+node_modules
+dist
+*.local
+.DS_Store
+.vscode/*
+!.vscode/extensions.json
+
+# Personal trade data never leaves this machine
+*.csv
+!fixtures/*.csv
+
+# Desktop app installers / unpacked builds
+release

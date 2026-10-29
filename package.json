@@ -1,0 +1,108 @@
+{
+  "name": "wheel-tracker",
+  "private": true,
+  "version": "0.5.0",
+  "description": "Wheel strategy cost-basis tracker for Robinhood exports",
+  "author": "Wheel Tracker",
+  "type": "module",
+  "main": "electron/main.cjs",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "app": "vite build && electron .",
+    "dist:win": "npm run build && electron-builder --win",
+    "release:win": "npm run build && electron-builder --win --publish always",
+    "dist:mac": "npm run build && electron-builder --mac --arm64"
+  },
+  "build": {
+    "appId": "com.wheeltracker.app",
+    "productName": "Wheel Tracker",
+    "directories": {
+      "output": "release",
+      "buildResources": "build-resources"
+    },
+    "files": [
+      "dist/**/*",
+      "build-resources/icon.png",
+      "package.json",
+      "electron/*.cjs"
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "build-resources/icon.png"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Wheel Tracker",
+      "artifactName": "WheelTracker-Setup-${version}.exe"
+    },
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "the2ndlead",
+        "repo": "wheel-tracker",
+        "releaseType": "release"
+      }
+    ],
+    "afterPack": "build-resources/after-pack.cjs",
+    "mac": {
+      "target": [
+        {
+          "target": "dmg",
+          "arch": [
+            "arm64"
+          ]
+        }
+      ],
+      "category": "public.app-category.finance",
+      "icon": "build-resources/icon.png",
+      "identity": null,
+      "hardenedRuntime": false,
+      "artifactName": "WheelTracker-${version}-mac-arm64.${ext}"
+    },
+    "dmg": {
+      "title": "Wheel Tracker ${version}"
+    }
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.10",
+    "@types/papaparse": "^5.3.14",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "autoprefixer": "^10.4.19",
+    "electron": "^33.4.11",
+    "electron-builder": "^25.1.8",
+    "papaparse": "^5.4.1",
+    "postcss": "^8.4.39",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "recharts": "^2.12.7",
+    "tailwindcss": "^3.4.6",
+    "typescript": "^5.5.3",
+    "vite": "^5.3.4",
+    "vitest": "^2.0.3",
+    "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz"
+  },
+  "allowScripts": {
+    "esbuild@0.21.5": true,
+    "electron@33.4.11": true
+  },
+  "dependencies": {
+    "electron-updater": "^6.8.9"
+  }
+}

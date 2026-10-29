@@ -1,0 +1,13 @@
+"Activity Date","Process Date","Settle Date","Instrument","Description","Trans Code","Quantity","Price","Amount"
+"8/5/2024","8/5/2024","8/6/2024","NVDA","NVDA 9/20/2024 Call $120.00","STO","1","$2.50","$250.00"
+"8/1/2024","8/1/2024","8/2/2024","NVDA","NVIDIA
+CUSIP: 67066G104","Buy","100","$100.00","($10,000.00)"
+"8/1/2024","8/1/2024","8/2/2024","NVDA","Option Exercise for NVDA 9/20/2024 Call $100.00","OEXCS","1","",""
+"7/15/2024","7/15/2024","7/16/2024","SGOV","iShares 0-3 Month Treasury Bond
+CUSIP: 46436E718","Buy","10","$100.00","($1,000.00)"
+"7/15/2024","7/15/2024","7/16/2024","SGOV","iShares 0-3 Month Treasury Bond
+CUSIP: 46436E718","Buy","10","$100.00","($1,000.00)"
+"7/8/2024","7/8/2024","7/9/2024","NVDA","NVDA 9/20/2024 Call $100.00","BTO","1","$5.00","($500.00)"
+"7/1/2024","7/1/2024","7/1/2024","","Interest Payment","INT","","","$12.34"
+"6/20/2024","6/20/2024","6/21/2024","SPY","SPY 7/19/2024 Call $550.00","STC","1","$6.50","$650.00"
+"","","","","","","","","The data provided is for informational purposes only."
