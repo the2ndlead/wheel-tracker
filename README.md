@@ -91,7 +91,9 @@ For each release:
 
 ## Mac app (Apple Silicon: M1–M4)
 
-macOS apps can only be packaged on a Mac, so you build it once on your MacBook. It takes about 5 minutes the first time. Afterwards, Wheel Tracker lives in Applications like any other app.
+**Easiest:** download `WheelTracker-<version>-mac-arm64.dmg` from the [latest release](https://github.com/the2ndlead/wheel-tracker/releases/latest), drag it into Applications, then run `xattr -cr "/Applications/Wheel Tracker.app"` in Terminal once (the app isn't Apple-signed). The release's DMG is built by the **Build installers** GitHub Actions workflow.
+
+To build it yourself instead: macOS apps can only be packaged on a Mac, so you build it once on your MacBook. It takes about 5 minutes the first time. Afterwards, Wheel Tracker lives in Applications like any other app.
 
 ### One-time setup
 

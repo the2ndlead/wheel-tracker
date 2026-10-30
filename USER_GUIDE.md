@@ -32,6 +32,13 @@ Your trade data stays on your computer. The only thing sent over the internet is
 
 To uninstall, go to **Settings → Apps → Wheel Tracker**.
 
+**Mac (Apple Silicon, M1–M4):**
+1. Download **`WheelTracker-<version>-mac-arm64.dmg`** from the same release, open it, and drag **Wheel Tracker** into **Applications**.
+2. The app isn't signed with a paid Apple certificate, so macOS blocks it the first time. In **Terminal**, run `xattr -cr "/Applications/Wheel Tracker.app"`, then open the app. Alternatively, try opening it once, then go to **System Settings → Privacy & Security** and click **Open Anyway**.
+3. Allow access to **Documents** when asked. Your reports folder is `~/Documents/Wheel Tracker/reports`.
+
+The Mac app doesn't update itself. Download the newest DMG and replace the app; your data is kept.
+
 ## 2. Get your Robinhood report
 
 1. On **robinhood.com** go to **Account → Reports and statements → Reports**.
